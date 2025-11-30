@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#000000]">
+    <!-- navbar -->
+<nav class="flex items-center justify-between px-6 py-4">
+  <!-- Left: Logo + Text -->
+  <div class="flex items-center gap-2">
+    <img src="./assets/images/logo.png" alt="logo" class="w-12 h-12" />
+    <h5 class="text-white font-bold text-lg">SavvyFi</h5>
+  </div>
+
+  <div id="nav-items" class="hidden md:block ">
+    <ul id="nav-items" class="flex items-center gap-2">
+      <a href="#hero"><li class="px-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-blue-500">Hero</li></a>
+      <a href="#features"><li class="px-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-blue-500">Features</li></a>
+      <a href="#technologies"><li class="px-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-blue-500">Technologies</li></a>
+      <a href="#templates"><li class="px-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-blue-500">Templates</li></a>
+      <a href="#pricing"><li class="px-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-blue-500">Pricing</li></a>
+    </ul>
+  </div>
+ 
+    <!-- From Uiverse.io by talhabangyal --> 
+<label class="hamburger  md:hidden" for="toggle-menu">
+  <input type="checkbox" id="toggle-menu" />
+  <svg viewBox="0 0 32 32">
+    <path
+      class="line line-top-bottom"
+      d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+    ></path>
+    <path class="line" d="M7 16 27 16"></path>
+  </svg>
+</label>
+<!-- drop down list -->
+
+<div id="drop-down" class="absolute top-14 right-6 p-2 rounded-xl bg-transparent backdrop-blur-xs z-100 hidden">
+  <ul id="drop-down-list" class="space-y-8 -100">
+    <a href="#hero"><li class="px-2 py-2 cursor-pointer transition-all duration-300 ease-in-out">Hero</li></a>
+    <a href="#features"><li class="px-2 py-2 cursor-pointer transition-all duration-300 ease-in-out">Features</li></a>
+    <a href="#technologies"><li class="px-2 py-2 cursor-pointer transition-all duration-300 ease-in-out">Technologies</li></a>
+    <a href="#templates"><li class="px-2 py-2 cursor-pointer transition-all duration-300 ease-in-out">Templates</li></a>
+    <a href="#pricing"><li class="px-2 py-2 cursor-pointer transition-all duration-300 ease-in-out">Pricing</li></a>
+  </ul>
+</div>
+</nav>
+
+    <!-- hero section -->
+    <section id="hero"
+      class="grid grid-cols-1 lg:grid-cols-3 items-center justify-between lg:h-[calc(100vh-65px)] px-6 gap-6"
+    >
+      <div class="flex flex-col col-span-1 order-2 lg:order-1">
+        <h1 class="text-4xl font-extrabold text-black dark:text-white my-4">
+          A Complete Admin UI Kit built on <br /><span
+            class="bg-gradient-to-bl from-violet-500 to-fuchsia-500 bg-clip-text text-transparent animated-gradient"
+            >HTML & Tailwind CSS.</span
+          >
+        </h1>
+        <p>
+          Tailux is a versatile React 19 and TailwindCSS v4 UI Kit featuring
+          components, <br />
+          dashboards, forms, datatables, and app templates to help you build
+          applications faster than ever.
+        </p>
+        <span class="flex flex-wrap items-center gap-4 my-4">
+         <!-- From Uiverse.io by satyamchaudharydev --> 
+<!-- From Uiverse.io by adamgiebl --> 
+<button>
+  <svg
+    height="24"
+    width="24"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path
+      d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+      fill="currentColor"
+    ></path>
+  </svg>
+  <span>Live Demo</span>
+</button>
+
+          <!-- From Uiverse.io by StealthWorm --> 
+<button type="button" class="btn">
+  <strong>Get Now</strong>
+  <div id="container-stars">
+    <div id="stars"></div>
+  </div>
+
+  <div id="glow">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</button>
+
+        </span>
+      </div>
+      <div class="col-span-2 order-1 lg:order-2">
+        <div class="lg:h-[calc(100vh-65px)] w-full bg-gray-700">
+          <video
+            src="./assets/videos/My Video3.mp4"
+            class="w-full h-full object-cover aspect-video lg:aspect-square "
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+      </div>
+    </section>
+    <!-- details section -->
+    <section  class="w-[90%] sm:w-[80%] lg:max-w-[70%] mx-auto">
+      <!-- features section -->
+      <section id="features" class="">
+        <h2 class="text-xl text-center my-8">
+          <strong class="text-3xl">SavvyFi?</strong> All you need to build
+          amazing web apps effortlessly.
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-8"
+        >
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <img src="./assets/images/features.webp" alt="" />
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <img src="./assets/images/features.webp" alt="" />
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <img src="./assets/images/features.webp" alt="" />
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 justify-center border border-gray-800 p-6 rounded-xl"
+          >
+            <h3 class="text-xl font-bold">Over 1000 Components</h3>
+            <p class="text-sm">
+              A vast library of reusable, modern, and beautifully designed
+              components to accelerate your development process.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    
+      <!-- Technology -->
+      <section id="technologies" class="my-24">
+        <h2 class="text-4xl font-bold text-center">Core Technology</h2>
+        <p class="text-center mx-auto max-w-md my-6">
+          SavvyFi is built with the following core technologies:
+        </p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p class="text-sm">
+              React is a JavaScript library for building user interfaces.
+            </p>
+          </div>
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p class="text-sm">
+              React is a JavaScript library for building user interfaces.
+            </p>
+          </div>
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p>React is a JavaScript library for building user interfaces.</p>
+          </div>
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p>React is a JavaScript library for building user interfaces.</p>
+          </div>
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p>React is a JavaScript library for building user interfaces.</p>
+          </div>
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p>React is a JavaScript library for building user interfaces.</p>
+          </div>
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p>React is a JavaScript library for building user interfaces.</p>
+          </div>
+          <div class="gap-4 border border-gray-800 p-6 rounded-xl">
+            <img
+              src="https://tailux-landing.vercel.app/images/logos/react-dark.svg"
+              alt="React"
+                class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <h3 class="text-lg lg:text-xl font-bold my-2">React</h3>
+            <p>React is a JavaScript library for building user interfaces.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Template -->
+      <section id="templates" class="my-24">
+        <h2 class="text-4xl font-bold text-center">Template</h2>
+        <p class="text-center mx-auto max-w-md my-6">
+          SavvyFi is built with the following core technologies:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="row-span-5 ">
+            <ul id="template-list" class=" space-y-2 sticky top-6">
+              <li
+                class="flex items-center gap-2 text-lg font-bold px-6 py-2 transition-all duration-300 ease-in-out  cursor-pointer rounded-xl active"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                    />
+                  </svg>
+                </span>
+                <span>Dashboards</span>
+              </li>
+              <li
+                class="flex items-center gap-2 text-lg font-bold px-6 py-2 transition-all duration-300 ease-in-out hover:text-blue-500 cursor-pointer rounded-xl"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                    />
+                  </svg>
+                </span>
+                <span>Analytics</span>
+              </li>
+              <li
+                class="flex items-center gap-2 text-lg font-bold px-6 py-2 transition-all duration-300 ease-in-out hover:text-blue-500 cursor-pointer rounded-xl"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
+                    />
+                  </svg>
+                </span>
+                <span>Projects</span>
+              </li>
+              <li
+                class="flex items-center gap-2 text-lg font-bold px-6 py-2 transition-all duration-300 ease-in-out hover:text-blue-500 cursor-pointer rounded-xl"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
+                    />
+                  </svg>
+                </span>
+                <span>Scrumboard</span>
+              </li>
+              <li
+                class="flex items-center gap-2 text-lg font-bold px-6 py-2 transition-all duration-300 ease-in-out hover:text-blue-500 cursor-pointer rounded-xl"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
+                </span>
+                <span>Invoice</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="relative  border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+              class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+            >
+              <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+              <p class="text-sm"> 
+                React is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div
+              class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2"
+            >
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+              class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+            >
+              <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+              <p class="text-sm">
+                React is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+              class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+            >
+              <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+              <p class="text-sm">
+                React is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+              class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+            >
+              <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+              <p class="text-sm">
+                React is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+              class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+            >
+              <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+              <p class="text-sm">
+                React is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+              class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+            >
+              <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+              <p class="text-sm">
+                React is a JavaScript library for building user interfaces.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+                class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+              >
+                <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+                <p class="text-sm">
+                  React is a JavaScript library for building user interfaces.
+                </p>
+              </div>
+            </div>
+            <div>
+            <div class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+                class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+              >
+                <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+                <p class="text-sm">
+                  React is a JavaScript library for building user interfaces.
+                </p>
+              </div>
+            </div>
+            <div>
+            <div class="gap-4 border border-gray-800 p-6 rounded-xl transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:rotate-2">
+              <img src="./assets/images/sales.webp" alt="sales" />
+            </div>
+            <div
+                class="absolute max-w-[90%] mx-auto relative bg-[#1d232a] border border-gray-800 px-6 py-2 rounded-xl bottom-10"
+              >
+                <h3 class="text-lg lg:text-xl font-bold">Sales</h3>
+                <p class="text-sm">
+                  React is a JavaScript library for building user interfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </section>
+
+      <!-- Ready To Get Started -->
+      <section id="pricing" class="relative py-6 md:py-0 w-full md:h-[45vh] mx-auto bg-[url(./assets/images/bg-get-started.webp)] bg-cover bg-center bg-no-repeat rounded-xl my-24">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-white/10 rounded-xl"></div>
+        <div class="flex items-center justify-center h-full">
+          <div class="text-center px-2 sm:px-0 z-50">
+            <h2 class="text-4xl font-bold text-center bg-gradient-to-bl from-violet-500 to-fuchsia-500 bg-clip-text text-transparent animated-gradient">
+  Ready To Get Started
+</h2>
+
+            <p class="text-center mx-auto max-w-md my-6 ">
+              With Tailux, building modern, scalable applications is a breeze. Enjoy lightning-fast performance and smooth efficiency to bring your project!
+            </p>
+    <div class="flex items-center justify-center">
+              <button type="button" class="btn ">
+  <strong>Get Now</strong>
+  <div id="container-stars">
+    <div id="stars"></div>
+  </div>
+
+  <div id="glow">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</button>
+    </div>
+          </div>
+        </div>
+      </section> 
+
+      
+      <!-- Footer -->
+       <footer class="py-8 border-t border-gray-800 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+    <img src="./assets/images/logo.png" alt="logo" class="w-8 h-8 sm:w-12 sm:h-12" />
+    <h5 class="text-white font-bold text-xs sm:text-sm md:text-lg">SavvyFi</h5>
+  </div>
+        <div>
+          <p class="text-xs sm:text-sm md:text-lg">© 2025 SavvyFi. All rights reserved.</p>
+        </div>
+       </footer>
+    </section>
+
+
+
+
+
+    <script src="./index.js"></script>
+  </body>
+</html>
