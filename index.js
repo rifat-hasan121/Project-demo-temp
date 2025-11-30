@@ -1,7 +1,7 @@
 // active color btn
-const listItems = document.querySelectorAll("#template-list li");
+const listItems = document.querySelectorAll(".tabs li");
 const itemsArray = Array.from(listItems);
-console.log(itemsArray);
+
 
 itemsArray.forEach((item) => {
   item.addEventListener("click", () => {
@@ -11,8 +11,6 @@ itemsArray.forEach((item) => {
     item.classList.add("active");
   });
 });
-
-
 
 // handle mobile menu
 const toggleMenu = document.getElementById("toggle-menu"); // the input
