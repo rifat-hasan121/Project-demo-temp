@@ -1,19 +1,41 @@
 // active color btn
 const listItems = document.querySelectorAll(".tabs li");
 const itemsArray = Array.from(listItems);
+const lightPages = document.querySelectorAll(".lightPages");
+const darkPages = document.querySelectorAll(".darkPages");
 
-
+// added active color and toggle dark and light
 itemsArray.forEach((item) => {
   item.addEventListener("click", () => {
     itemsArray.forEach((item) => {
       item.classList.remove("active");
     });
-    item.classList.add("active");
+    item.classList.add("active");   
+    const activeItem = document.querySelector(".tabs li.active");
+    if (activeItem) {
+      if (activeItem.innerText.trim()==="Dark") {
+        lightPages.forEach((page) => {
+          page.classList.add("hidden");
+        });
+        darkPages.forEach((page) => {
+          page.classList.remove("hidden");
+        });
+      }
+      else{
+        lightPages.forEach((page) => {
+          page.classList.remove("hidden");
+        });
+        darkPages.forEach((page) => {
+          page.classList.add("hidden");
+        });
+      }
+    }
   });
 });
 
+
 // handle mobile menu
-const toggleMenu = document.getElementById("toggle-menu"); // the input
+const toggleMenu = document.getElementById("toggle-menu");
 const dropDown = document.getElementById("drop-down");
 const label = document.querySelector('label[for="toggle-menu"]');
 
@@ -28,13 +50,16 @@ toggleMenu.addEventListener("change", () => {
 
 // Prevent SVG click from closing menu
 label.addEventListener("click", (e) => {
-  e.stopPropagation(); // stop bubbling so window click won't trigger
+  e.stopPropagation(); 
 });
 
 // Close when clicking outside
 window.addEventListener("click", (e) => {
   if (!label.contains(e.target) && !dropDown.contains(e.target)) {
     dropDown.classList.add("hidden");
-    toggleMenu.checked = false; // reset checkbox
+    toggleMenu.checked = false; 
   }
 });
+
+
+
