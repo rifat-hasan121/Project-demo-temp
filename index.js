@@ -1,3 +1,4 @@
+
 // active color btn
 const listItems = document.querySelectorAll(".tabs li");
 const itemsArray = Array.from(listItems);
@@ -47,19 +48,14 @@ toggleMenu.addEventListener("change", () => {
     dropDown.classList.add("hidden");
   }
 });
-
-// Prevent SVG click from closing menu
 label.addEventListener("click", (e) => {
   e.stopPropagation(); 
 });
-
-// Close when clicking outside
 window.addEventListener("click", (e) => {
   if (!label.contains(e.target) && !dropDown.contains(e.target)) {
     dropDown.classList.add("hidden");
     toggleMenu.checked = false; 
   }
 });
-
 
 
